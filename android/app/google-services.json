@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "117456397704",
+    "firebase_url": "https://healthcare-39edd.firebaseio.com",
+    "project_id": "healthcare-39edd",
+    "storage_bucket": "healthcare-39edd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117456397704:android:bb76dcc0371608b0cfc63d",
+        "android_client_info": {
+          "package_name": "com.piylotech.skin_care_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117456397704-sivn35acitbri6g95c4jtd2uc3fv0efd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.piylotech.skin_care_app",
+            "certificate_hash": "a08b98f86adfa9839216c49699e72f16f11199de"
+          }
+        },
+        {
+          "client_id": "117456397704-500ttl81gjsopj1n5b0d31na6oh7i0j9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ9f_zw7K947XI5VXDN3PzlaO_3146CO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117456397704-500ttl81gjsopj1n5b0d31na6oh7i0j9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

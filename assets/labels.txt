@@ -1,0 +1,34 @@
+0 Acanthosis Nigricans
+1 Accessory Nipple
+2 Accessory Trachus
+3 Acne Kleoidalis
+4 Acromegaly
+5 Allergic Contact Dermatitis
+6 Athlete's Foot
+7 Atopic Dermatitis
+8 Black Hairy Tongue
+9 Bullous Pemphigoid
+10 Chromomycosis
+11 Coxsackie
+12 Cylinderoma
+13 Dermatomyositis
+14 Duhring
+15 Erythema Annulare Centrifugum
+16 Exanthem
+17 Granuloma
+18 Hydrocystoma
+19 Id Reaction
+20 Incontinentia Pigmenti
+21 Kyrie
+22 Larva Migrans
+23 Mycobacterium Fortuitum Infection
+24 Necrobiosis Lipoidica
+25 Scabies
+ Tinea Capitis
+27 Wart
+Acne Vulgaris
+29 Eczema
+Pyoderma
+Chicken Pox
+Elephantiasis
+Melanonychia
