@@ -3,7 +3,9 @@
 A Flutter Application to detect skin disease , with a inbuild interact with doctor  facility with regional laguage (initially hindi and english only ) support  using a chat portal. 
 
 # Screenshots
-
+![](Screenshots/Screen1.png)
+![](Screenshots/Screen2.png)
+![](Screenshots/Screen3.png)
 ## Getting Started
 
 This project is a starting point for a Flutter application.
