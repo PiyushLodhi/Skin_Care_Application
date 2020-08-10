@@ -10,8 +10,9 @@ class Message {
   String message;
   FieldValue timestamp;
   String photoUrl;
+  String hindiMessage;
 
-  Message({this.senderUid, this.receiverUid, this.type, this.message, this.timestamp});
+  Message({this.senderUid, this.receiverUid, this.type, this.message, this.timestamp,this.hindiMessage});
   Message.withoutMessage({this.senderUid, this.receiverUid, this.type, this.timestamp, this.photoUrl});
 
   Map toMap() {
@@ -21,6 +22,7 @@ class Message {
     map['type'] = this.type;
     map['message'] = this.message;
     map['timestamp'] = this.timestamp;
+    map['hindiMessage'] = this.hindiMessage;
     return map;
   }
 
@@ -31,6 +33,8 @@ class Message {
     _message.type = map['type'];
     _message.message = map['message'];
     _message.timestamp = map['timestamp'];
+    _message.hindiMessage = map['hindiMessage'];
+
     return _message;
   }
 

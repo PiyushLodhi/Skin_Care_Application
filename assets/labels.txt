@@ -1,34 +1,34 @@
-0 Acanthosis Nigricans
-1 Accessory Nipple
-2 Accessory Trachus
-3 Acne Kleoidalis
-4 Acromegaly
-5 Allergic Contact Dermatitis
-6 Athlete's Foot
-7 Atopic Dermatitis
-8 Black Hairy Tongue
-9 Bullous Pemphigoid
-10 Chromomycosis
-11 Coxsackie
-12 Cylinderoma
-13 Dermatomyositis
-14 Duhring
-15 Erythema Annulare Centrifugum
-16 Exanthem
-17 Granuloma
-18 Hydrocystoma
-19 Id Reaction
-20 Incontinentia Pigmenti
-21 Kyrie
-22 Larva Migrans
-23 Mycobacterium Fortuitum Infection
-24 Necrobiosis Lipoidica
-25 Scabies
- Tinea Capitis
-27 Wart
-Acne Vulgaris
-29 Eczema
-Pyoderma
-Chicken Pox
-Elephantiasis
-Melanonychia
+Problable disease: Acanthosis Nigricans
+Problable disease: Accessory Nipple
+Problable disease: Accessory Trachus
+Problable disease: Acne Kleoidalis
+Problable disease: Acromegaly
+Problable disease: Allergic Contact Dermatitis
+Problable disease: Athlete's Foot
+Problable disease: Atopic Dermatitis
+Problable disease: Black Hairy Tongue
+Problable disease: Bullous Pemphigoid
+Problable disease: Chromomycosis
+Problable disease: Coxsackie
+Problable disease: Cylinderoma
+Problable disease: Dermatomyositis
+Problable disease: Duhring
+Problable disease: Erythema Annulare Centrifugum
+Problable disease: Exanthem
+Problable disease: Granuloma
+Problable disease: Hydrocystoma
+Problable disease: Id Reaction
+Problable disease: Incontinentia Pigmenti
+Problable disease: Kyrie
+Problable disease: Larva Migrans
+Problable disease: Mycobacterium Fortuitum Infection
+Problable disease: Necrobiosis Lipoidica
+Problable disease: Scabies
+Problable disease: Tinea Capitis
+Problable disease: Wart
+Problable disease: Acne Vulgaris
+Problable disease: Eczema
+Problable disease: Pyoderma
+Problable disease: Chicken Pox
+Problable disease: Elephantiasis
+Problable disease: Melanonychia

@@ -7,7 +7,7 @@ class Brew {
   final String position ;
   final List <String> contacts;
   final String id;
-
-  Brew({ this.name,this.email, this.age, this.gender,this.position,this.contacts,this.id });
+  final int patients;
+  Brew({ this.name,this.email, this.age, this.gender,this.position,this.contacts,this.id,this.patients });
 
 }

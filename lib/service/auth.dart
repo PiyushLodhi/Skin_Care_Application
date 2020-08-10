@@ -56,7 +56,7 @@ class AuthService
      String y= user.uid;
      x.add(y);
      //x.add('papppp');
-     await DatabaseService(uid: user.uid).updateUserData('Piyush Lodhi',email,0, 'NA','NA',x);
+     await DatabaseService(uid: user.uid).updateUserData('user',email,0, "Male","patient",x,0);
      return _userfromfirebaseuser(user);
    } catch (error) {
      print(error.toString());

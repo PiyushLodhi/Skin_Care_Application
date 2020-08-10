@@ -9,17 +9,22 @@ import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:skin_care_app/lastsort/full_screen_image.dart';
 import 'package:skin_care_app/lastsort/models/message.dart';
+import 'package:translator/translator.dart';
+
+import 'package:skin_care_app/shared/loading.dart';
 
 class ChatScreen extends StatefulWidget {
   String name;
   String photoUrl;
   String receiverUid;
-  ChatScreen({this.name, this.photoUrl, this.receiverUid});
+  String language;
+  ChatScreen({this.name, this.photoUrl, this.receiverUid,this.language});
 
   _ChatScreenState createState() => _ChatScreenState();
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  final translator = new GoogleTranslator();
   Message _message;
   var _formKey = GlobalKey<FormState>();
   var map = Map<String, dynamic>();
@@ -36,7 +41,7 @@ class _ChatScreenState extends State<ChatScreen> {
   File imageFile;
   StorageReference _storageReference;
   TextEditingController _messageController;
-
+  bool loading = false;
   @override
   void initState() {
     super.initState();
@@ -70,6 +75,12 @@ class _ChatScreenState extends State<ChatScreen> {
 
   void addMessageToDb(Message message) async {
     print("Message : ${message.message}");
+    String text1=message.hindiMessage;
+
+    loading=true;
+    await translator.translate(text1, from: 'en', to: 'hi').then((s) {
+      message.hindiMessage=s;
+    });
     map = message.toMap();
 
     print("Map : ${map}");
@@ -91,12 +102,13 @@ class _ChatScreenState extends State<ChatScreen> {
       print("Messages added to db");
     });
 
+    loading=false;
     _messageController.text = "";
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading():Scaffold(
         appBar: AppBar(
           title: Text(widget.name),
         ),
@@ -153,6 +165,7 @@ class _ChatScreenState extends State<ChatScreen> {
               decoration: InputDecoration(
                   hintText: "Enter message...",
                   labelText: "Message",
+
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.0))),
               onFieldSubmitted: (value) {
@@ -169,8 +182,9 @@ class _ChatScreenState extends State<ChatScreen> {
                 color: Colors.black,
               ),
               onPressed: () {
-                if (_formKey.currentState.validate()) {
+                if (_formKey.currentState.validate() && !loading) {
                   sendMessage();
+                  //loading=false;
                 }
               },
             ),
@@ -235,10 +249,19 @@ class _ChatScreenState extends State<ChatScreen> {
     print("Inside send message");
     var text = _messageController.text;
     print(text);
+    loading=true;
+    String text1=text;
+    print(widget.language);
+   await translator.translate(text1, from: 'hi', to: 'en').then((s) {
+      text=s;
+    });
+
+    //print(text);
     _message = Message(
         receiverUid: widget.receiverUid,
         senderUid: _senderuid,
         message: text,
+        hindiMessage:text1,
         timestamp: FieldValue.serverTimestamp(),
         type: 'text');
     print(
@@ -294,10 +317,19 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 
-  Widget chatMessageItem(DocumentSnapshot documentSnapshot) {
+  Widget chatMessageItem(DocumentSnapshot documentSnapshot){
+
     return buildChatLayout(documentSnapshot);
   }
 
+  String fun (String s1)
+  {
+    Timer.run(() async {
+      translator.translate(s1, from: 'en', to: 'hi').then((s) {
+        return s;
+      });
+    });
+  }
   Widget buildChatLayout(DocumentSnapshot snapshot) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -344,7 +376,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         ),
                   snapshot['type'] == 'text'
                       ? new Text(
-                          snapshot['message'],
+                           widget.language=='English'?snapshot['message']:snapshot['hindiMessage'],
                           style: TextStyle(color: Colors.black, fontSize: 14.0),
                         )
                       : InkWell(
