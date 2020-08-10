@@ -1,6 +1,8 @@
 # skin_care_app
 
-A new Flutter application.
+A Flutter Application to detect skin disease , with a inbuild interact with doctor  facility with regional laguage (initially hindi and english only ) support  using a chat portal. 
+
+# Screenshots
 
 ## Getting Started
 
