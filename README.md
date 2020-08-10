@@ -4,7 +4,7 @@ A Flutter Application to detect skin disease , with a inbuild interact with doct
 
 # Screenshots
 <p float="left">
-<img align="left" src="Screenshots/Screen1.jpg" width="325"/> <img align="left" src="Screenshots/Screen2.jpg" width="325"/> 
+<img align="left" src="Screenshots/Screen1.jpg" width="225"/> <img align="left" src="Screenshots/Screen2.jpg" width="225"/> 
 </p>
 ## Getting Started
 
